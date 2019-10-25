@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28705.295
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.IoTMonitor", "Server.IoTMonitor\Server.IoTMonitor.csproj", "{7E8A8E17-8F6A-4521-BCEA-CF97AA036952}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator.IoTMonitor", "Generator.IoTMonitor\Generator.IoTMonitor.csproj", "{DEC5DB77-0EFF-4330-BF4F-C20F561087FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E8A8E17-8F6A-4521-BCEA-CF97AA036952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E8A8E17-8F6A-4521-BCEA-CF97AA036952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E8A8E17-8F6A-4521-BCEA-CF97AA036952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E8A8E17-8F6A-4521-BCEA-CF97AA036952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC5DB77-0EFF-4330-BF4F-C20F561087FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC5DB77-0EFF-4330-BF4F-C20F561087FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC5DB77-0EFF-4330-BF4F-C20F561087FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC5DB77-0EFF-4330-BF4F-C20F561087FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF47F340-25BF-4C08-8B48-B83B1E234605}
+	EndGlobalSection
+EndGlobal

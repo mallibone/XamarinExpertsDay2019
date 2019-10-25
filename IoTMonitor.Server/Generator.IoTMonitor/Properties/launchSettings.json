@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Generator.IoTMonitor": {
+      "commandName": "Project",
+      "commandLineArgs": "HostName=IoTEndpoint.azure-devices.net;DeviceId=test-device-01;SharedAccessKey=bLjAUBQNerWavfUfd3eM3Cp2WGTPd1xxxlqEbYgsYss="
+    }
+  }
+}

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Mobile.IoTMonitor"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="Mobile.IoTMonitor.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Humidity Gauge -->
+        <gauge:SfCircularGauge VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand"
+                                       Margin="10" Grid.Column="0">
+
+            <gauge:SfCircularGauge.Headers>
+                <gauge:Header Text="{Binding HumidityLabel}"
+                                      ForegroundColor="Black"
+                                      TextSize="20" />
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+
+                <gauge:Scale ShowTicks="False"
+                                     StartValue="0"
+                                     EndValue="100">
+
+                    <gauge:Scale.Ranges>
+                        <gauge:Range StartValue="40"
+                                             EndValue="60"
+                                             Color="Green" />
+                    </gauge:Scale.Ranges>
+
+                    <gauge:Scale.Pointers>
+                        <gauge:NeedlePointer Value="{Binding Humidity}" />
+                    </gauge:Scale.Pointers>
+
+                </gauge:Scale>
+
+            </gauge:SfCircularGauge.Scales>
+
+        </gauge:SfCircularGauge>
+
+        <!-- Temperature Gauge -->
+        <gauge:SfCircularGauge VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand"
+                                       Margin="10" Grid.Column="1">
+
+            <gauge:SfCircularGauge.Headers>
+                <gauge:Header Text="{Binding TemperatureLabel}"
+                                      ForegroundColor="Black"
+                                      TextSize="20" />
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+
+                <gauge:Scale ShowTicks="False"
+                                     StartValue="10"
+                                     EndValue="60">
+
+                    <gauge:Scale.Ranges>
+                        <gauge:Range StartValue="10"
+                                             EndValue="20">
+                            <gauge:Range.GradientStops>
+                                <gauge:GaugeGradientStop Value="0"
+                                                                 Color="Blue" />
+                                <gauge:GaugeGradientStop Value="20"
+                                                                 Color="Green" />
+
+                            </gauge:Range.GradientStops>
+                        </gauge:Range>
+                        <gauge:Range StartValue="20"
+                                             EndValue="26"
+                                             Color="Green" />
+                        <gauge:Range StartValue="26"
+                                             EndValue="32">
+                            <gauge:Range.GradientStops>
+                                <gauge:GaugeGradientStop Value="26"
+                                                                 Color="Green" />
+                                <gauge:GaugeGradientStop Value="32"
+                                                                 Color="Yellow" />
+
+                            </gauge:Range.GradientStops>
+                        </gauge:Range>
+                        <gauge:Range StartValue="32"
+                                             EndValue="60">
+                            <gauge:Range.GradientStops>
+                                <gauge:GaugeGradientStop Value="32"
+                                                                 Color="Yellow" />
+                                <gauge:GaugeGradientStop Value="60"
+                                                                 Color="Red" />
+
+                            </gauge:Range.GradientStops>
+                        </gauge:Range>
+                    </gauge:Scale.Ranges>
+
+                    <gauge:Scale.Pointers>
+                        <gauge:NeedlePointer Value="{Binding Temperature}" />
+                    </gauge:Scale.Pointers>
+
+                </gauge:Scale>
+
+            </gauge:SfCircularGauge.Scales>
+        </gauge:SfCircularGauge>
+
+        <!-- Pressure Gauge -->
+        <gauge:SfCircularGauge VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand"
+                                       Margin="10" Grid.Column="2">
+
+            <gauge:SfCircularGauge.Headers>
+                <gauge:Header Text="{Binding PressureLabel}"
+                                      ForegroundColor="Black"
+                                      TextSize="20" />
+            </gauge:SfCircularGauge.Headers>
+
+            <gauge:SfCircularGauge.Scales>
+
+                <gauge:Scale ShowTicks="true"
+                                     StartValue="800"
+                                     EndValue="1100"
+                                     Interval="50">
+
+                    <gauge:Scale.Pointers>
+                        <gauge:NeedlePointer Value="{Binding Pressure}" />
+                    </gauge:Scale.Pointers>
+
+                </gauge:Scale>
+
+            </gauge:SfCircularGauge.Scales>
+
+        </gauge:SfCircularGauge>
+
+        <Slider Grid.Row="1" Grid.Column="1" Value="{Binding ColorValue}" ThumbColor="{Binding HexColorValue}" BackgroundColor="{Binding HexColorValue}" Minimum="0" Maximum="1" />
+    </Grid>
+
+</ContentPage>
